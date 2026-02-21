@@ -15,12 +15,13 @@ export default function Home() {
   useEffect(() => {
     const fetchCountries = async () => {
       try {
-        const response = await fetch('https://restcountries.com/v3.1/all');
-        if (!response.ok) throw new Error('Data fetch karne mein masla aya!');
+        const response = await fetch('https://restcountries.com/v3.1/all?fields=name,flags,population,region,capital,cca3');
+        if (!response.ok) throw new Error('Failed to fetch data from the API!');
         const data = await response.json();
         setCountries(data);
         setLoading(false);
       } catch (err) {
+        console.error("Fetch Error: ", err); // For debugging
         setError(err.message);
         setLoading(false);
       }
@@ -52,7 +53,7 @@ export default function Home() {
           value={searchTerm}
           onChange={(e) => {
             setSearchTerm(e.target.value);
-            setCurrentPage(1); // Jab user search kare tou wapis Page 1 par aa jaye
+            setCurrentPage(1); // Reset to page 1 when user types in search
           }}
         />
       </div>
@@ -65,7 +66,7 @@ export default function Home() {
           ))}
         </div>
       ) : (
-        <p className="text-center text-gray-500 text-xl mt-10">Koi country nahi mili!</p>
+        <p className="text-center text-gray-500 text-xl mt-10">No countries found!</p>
       )}
 
       {/* Pagination Component */}

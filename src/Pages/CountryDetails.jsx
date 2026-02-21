@@ -12,11 +12,12 @@ export default function CountryDetails() {
     const fetchCountryDetail = async () => {
       try {
         const response = await fetch(`https://restcountries.com/v3.1/name/${name}?fullText=true`);
-        if (!response.ok) throw new Error('Country ki details nahi milin!');
+        if (!response.ok) throw new Error('Country details not found!');
         const data = await response.json();
         setCountry(data[0]);
         setLoading(false);
       } catch (err) {
+        console.error("Fetch Error: ", err); // For debugging
         setError(err.message);
         setLoading(false);
       }
