@@ -85,7 +85,8 @@ export default function Auth() {
       </div>
 
       <div className="w-full max-w-md bg-white dark:bg-gray-800 rounded-2xl shadow-2xl border border-gray-100 dark:border-gray-700 p-8 transition-all duration-500 animate-fade-in hover:shadow-[0_20px_50px_rgba(8,_112,_184,_0.1)]">
-        <h2 className="text-3xl font-extrabold text-gray-900 dark:text-white text-center mb-8 tracking-tight">
+        {/* Yahan Heading hamesha Blue rahegi */}
+        <h2 className="text-3xl font-extrabold text-blue-600 dark:text-blue-400 text-center mb-8 tracking-tight">
           {isLogin ? 'Sign In' : 'Create Account'}
         </h2>
 
@@ -123,8 +124,9 @@ export default function Auth() {
             <input type="password" required placeholder="Password" className="w-full pl-11 pr-4 py-3 bg-gray-50 dark:bg-gray-900/50 border border-gray-200 dark:border-gray-700 rounded-xl text-gray-900 dark:text-white focus:ring-2 focus:ring-blue-500 outline-none transition-all shadow-sm" value={password} onChange={(e) => setPassword(e.target.value)} />
           </div>
 
-          <button type="submit" disabled={loading || uploading} className="w-full py-3.5 px-4 bg-gray-900 hover:bg-gray-800 dark:bg-blue-600 dark:hover:bg-blue-700 text-white font-semibold rounded-xl transition-all duration-300 transform active:scale-95 flex justify-center items-center shadow-md hover:shadow-lg disabled:opacity-70">
-            {loading ? <Loader2 className="w-5 h-5 animate-spin" /> : (isLogin ? 'Sign In' : 'Sign Up')}
+          {/* Yahan Button hamesha Blue aur Text White rahega */}
+          <button type="submit" disabled={loading || uploading} className="w-full py-3.5 px-4 bg-blue-600 hover:bg-blue-700 text-white font-semibold rounded-xl transition-all duration-300 transform active:scale-95 flex justify-center items-center shadow-md hover:shadow-lg disabled:opacity-70">
+            {loading ? <Loader2 className="w-5 h-5 animate-spin text-white" /> : (isLogin ? 'Sign In' : 'Sign Up')}
           </button>
         </form>
 

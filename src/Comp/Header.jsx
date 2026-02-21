@@ -40,8 +40,8 @@ export default function Header() {
       text: "You will be logged out of your account.",
       icon: 'warning',
       showCancelButton: true,
-      confirmButtonColor: '#3085d6',
-      cancelButtonColor: '#d33',
+      confirmButtonColor: '#3b82f6',
+      cancelButtonColor: '#ef4444',
       confirmButtonText: 'Yes, log out!'
     }).then(async (result) => {
       if (result.isConfirmed) {
@@ -114,7 +114,8 @@ export default function Header() {
                 </button>
               </div>
             ) : (
-              <Link to="/auth" className="px-5 py-2.5 bg-gray-900 dark:bg-blue-600 text-white font-medium rounded-xl hover:bg-gray-800 dark:hover:bg-blue-700 transition-all duration-300 shadow-sm hover:shadow-md transform hover:-translate-y-0.5">
+              // Sign in button ab pakka Blue hoga with White text
+              <Link to="/auth" className="px-5 py-2.5 bg-blue-600 hover:bg-blue-700 text-white font-medium rounded-xl transition-all duration-300 shadow-sm hover:shadow-md transform hover:-translate-y-0.5">
                 Sign In
               </Link>
             )}
@@ -131,7 +132,8 @@ export default function Header() {
               <X className="w-5 h-5" />
             </button>
 
-            <h3 className="text-xl font-bold text-gray-900 dark:text-white mb-6 text-center">Profile Picture</h3>
+            {/* Modal Heading pakka Blue */}
+            <h3 className="text-xl font-bold text-blue-600 dark:text-blue-400 mb-6 text-center">Profile Picture</h3>
             
             <div className="w-40 h-40 mx-auto mb-8 relative rounded-full overflow-hidden border-4 border-gray-100 dark:border-gray-700 shadow-inner group">
               {uploading ? (
@@ -143,7 +145,8 @@ export default function Header() {
               )}
             </div>
 
-            <label className="block w-full text-center py-3.5 bg-gray-900 hover:bg-gray-800 dark:bg-blue-600 dark:hover:bg-blue-700 text-white font-semibold rounded-xl cursor-pointer transition-all duration-300 shadow-md hover:shadow-lg active:scale-95">
+            {/* Update button pakka Blue */}
+            <label className="block w-full text-center py-3.5 bg-blue-600 hover:bg-blue-700 text-white font-semibold rounded-xl cursor-pointer transition-all duration-300 shadow-md hover:shadow-lg active:scale-95">
               {uploading ? 'Updating...' : 'Upload New Image'}
               <input type="file" accept="image/*" className="hidden" onChange={handleUpdateImage} disabled={uploading} />
             </label>

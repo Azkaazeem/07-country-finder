@@ -45,12 +45,12 @@ export default function CountryDetails() {
   return (
     <div className="max-w-5xl mx-auto mt-6 animate-fade-in">
       
-      {/* Premium Back Button */}
+      {/* Premium Back Button - Ab Pakka Blue hai */}
       <Link 
         to="/" 
-        className="group inline-flex items-center mb-8 px-5 py-2.5 bg-white dark:bg-gray-800 text-gray-700 dark:text-gray-200 font-semibold rounded-xl shadow-sm border border-gray-200 dark:border-gray-700 hover:shadow-md hover:border-blue-500 dark:hover:border-blue-400 transition-all duration-300"
+        className="group inline-flex items-center mb-8 px-5 py-2.5 bg-blue-600 hover:bg-blue-700 text-white font-semibold rounded-xl shadow-md hover:shadow-lg transition-all duration-300"
       >
-        <ArrowLeft className="w-5 h-5 mr-2 transform group-hover:-translate-x-1 transition-transform duration-300 text-gray-500 dark:text-gray-400 group-hover:text-blue-500 dark:group-hover:text-blue-400" /> 
+        <ArrowLeft className="w-5 h-5 mr-2 transform group-hover:-translate-x-1 transition-transform duration-300 text-white" /> 
         Back to Dashboard
       </Link>
       
@@ -58,7 +58,6 @@ export default function CountryDetails() {
       <div className="bg-white dark:bg-gray-800 rounded-3xl shadow-xl border border-gray-100 dark:border-gray-700 overflow-hidden transition-colors duration-500 hover:shadow-2xl">
         <div className="flex flex-col lg:flex-row">
           
-          {/* Left Column: Flag Image */}
           <div className="w-full lg:w-1/2 p-6 lg:p-10 flex items-center justify-center bg-gray-50 dark:bg-gray-900/50">
             <div className="relative group w-full overflow-hidden rounded-2xl shadow-lg border border-gray-200 dark:border-gray-700">
               <img 
@@ -69,7 +68,6 @@ export default function CountryDetails() {
             </div>
           </div>
           
-          {/* Right Column: Information */}
           <div className="w-full lg:w-1/2 p-6 lg:p-10 flex flex-col justify-center">
             
             <h1 className="text-4xl lg:text-5xl font-extrabold text-transparent bg-clip-text bg-gradient-to-r from-blue-600 to-purple-600 dark:from-blue-400 dark:to-purple-400 mb-2 tracking-tight">
@@ -81,7 +79,6 @@ export default function CountryDetails() {
 
             <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
               
-              {/* Capital Box */}
               <div className="flex items-start gap-3">
                 <div className="p-2.5 bg-blue-50 dark:bg-blue-900/20 text-blue-600 dark:text-blue-400 rounded-lg">
                   <Building2 className="w-5 h-5" />
@@ -92,7 +89,6 @@ export default function CountryDetails() {
                 </div>
               </div>
 
-              {/* Population Box */}
               <div className="flex items-start gap-3">
                 <div className="p-2.5 bg-purple-50 dark:bg-purple-900/20 text-purple-600 dark:text-purple-400 rounded-lg">
                   <Users className="w-5 h-5" />
@@ -103,7 +99,6 @@ export default function CountryDetails() {
                 </div>
               </div>
 
-              {/* Region Box */}
               <div className="flex items-start gap-3">
                 <div className="p-2.5 bg-emerald-50 dark:bg-emerald-900/20 text-emerald-600 dark:text-emerald-400 rounded-lg">
                   <Globe2 className="w-5 h-5" />
@@ -114,7 +109,6 @@ export default function CountryDetails() {
                 </div>
               </div>
 
-              {/* Subregion Box */}
               <div className="flex items-start gap-3">
                 <div className="p-2.5 bg-amber-50 dark:bg-amber-900/20 text-amber-600 dark:text-amber-400 rounded-lg">
                   <MapPin className="w-5 h-5" />
@@ -129,14 +123,11 @@ export default function CountryDetails() {
 
             <hr className="my-8 border-gray-200 dark:border-gray-700" />
 
-            {/* Badges Section for Languages and Currencies */}
             <div className="space-y-6">
-              
-              {/* Languages */}
               <div>
                 <div className="flex items-center gap-2 mb-3">
-                  <Languages className="w-5 h-5 text-gray-400" />
-                  <h3 className="text-sm font-bold text-gray-900 dark:text-white uppercase tracking-wider">Languages</h3>
+                  <Languages className="w-5 h-5 text-blue-600 dark:text-blue-400" />
+                  <h3 className="text-sm font-bold text-blue-600 dark:text-blue-400 uppercase tracking-wider">Languages</h3>
                 </div>
                 <div className="flex flex-wrap gap-2">
                   {country.languages ? Object.values(country.languages).map((lang, index) => (
@@ -149,11 +140,10 @@ export default function CountryDetails() {
                 </div>
               </div>
 
-              {/* Currencies */}
               <div>
                 <div className="flex items-center gap-2 mb-3">
-                  <Coins className="w-5 h-5 text-gray-400" />
-                  <h3 className="text-sm font-bold text-gray-900 dark:text-white uppercase tracking-wider">Currencies</h3>
+                  <Coins className="w-5 h-5 text-blue-600 dark:text-blue-400" />
+                  <h3 className="text-sm font-bold text-blue-600 dark:text-blue-400 uppercase tracking-wider">Currencies</h3>
                 </div>
                 <div className="flex flex-wrap gap-2">
                   {country.currencies ? Object.values(country.currencies).map((curr, index) => (
